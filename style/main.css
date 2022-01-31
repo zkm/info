@@ -1,0 +1,59 @@
+body {
+  background: #f4ddb1;
+  margin: 0;
+  font: 10pt/14pt "Lucida Grande", Verdana, Helvetica, sans-serif;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: #275a78;
+  text-decoration: none;
+}
+
+a:hover,
+a:active:hover,
+a:focus {
+  color: #333333;
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #8c7364;
+}
+
+header {
+  background: url("../images/bg-header.gif") no-repeat #f4ddb1 top left;
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+header code {
+  position: absolute;
+  bottom: -20px;
+}
+
+footer {
+  background: transparent;
+  height: 66px;
+  text-align: center;
+  font: 8pt/14pt "Lucida Grande", Verdana, Helvetica, sans-serif;
+  color: #333333;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.content {
+  padding: 21px;
+  text-align: justify;
+  font: 9pt/14pt "Lucida Grande", Verdana, Helvetica, sans-serif;
+}
