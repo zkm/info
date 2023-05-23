@@ -49,7 +49,6 @@ Refer to the webpack-dashboard documentation for more information on how to util
 *   [Webpack Documentation](https://webpack.js.org/)
 *   [Webpack Dashboard Documentation](https://github.com/FormidableLabs/webpack-dashboard)
 
-License
--------
+### License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under the [MIT License](LICENSE).
