@@ -6,11 +6,11 @@ ZachSchneider.info is a personal website built using webpack and webpack-dashboa
 
 1.  Clone the repository:
         
-    `git clone https://github.com/your-username/ZachSchneider.info.git`
+    `git clone git@github.com:zkm/info.git`
     
 2.  Navigate to the project directory:
         
-    `cd ZachSchneider.info`
+    `cd info`
     
 3.  Install the dependencies:
         
