@@ -3,6 +3,7 @@ const path = require("path");
 const glob = require('glob');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   mode: "development", // Set the mode to 'development' or 'production'
@@ -43,5 +44,20 @@ module.exports = {
         },
       ],
     }),
+    new DashboardPlugin({
+      // Custom options here
+      customOptions: {
+        logLevel: 'info',
+        minWidth: 500,
+        minHeight: 300,
+        borderRadius: 10,
+        theme: {
+          scheme: 'monokai',
+          author: 'wimer hazenberg (http://www.monokai.nl)',
+          base00: '#272822', // example custom color
+          // more custom colors...
+        }
+      }
+    })
   ],
 };
