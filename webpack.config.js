@@ -1,12 +1,15 @@
+// webpack.config.js
 const path = require("path");
+const glob = require('glob');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: 'development',
+  mode: "development", // Set the mode to 'development' or 'production'
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
@@ -15,20 +18,30 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        type: "asset/resource",
+        test: /\.(png|jpg|gif|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]',
+        },
       },
+      { test: /\.(hbs|handlebars)$/, loader: "handlebars-loader" },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/index.hbs", // or index.handlebars
+      templateParameters: require("./src/content.json"),
+      filename: "index.html",
+      inject: "body",
+      scriptLoading: "blocking",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "src/assets",
+          to: "assets",
+        },
+      ],
     }),
   ],
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, "dist"),
-    },
-    port: 3000,
-  },
 };
