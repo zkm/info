@@ -25,7 +25,7 @@ h3 {
 }
 
 header {
-  background: url("../images/bg-header.gif") no-repeat #f4ddb1 top left;
+  background: url("assets/bg-header.gif") no-repeat #f4ddb1 top left;
   width: 500px;
   height: 500px;
   position: relative;

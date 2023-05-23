@@ -1,0 +1,34 @@
+{
+    "header": "ZachSchneider.info",
+    "version": "v0.5",
+    "welcome": {
+      "title": "Welcome!",
+      "text": "Hello my name is Zach...WOW impressive I know well this site was made for no reason. I am not selling anything I don't want anything I am just really bored and well this is something I just felt like doing."
+    },
+    "about": {
+      "title": "About Me",
+      "text": "I am a Web and Graphic Designer with a 4-Year degree from the famous Westwood College."
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "me[at]ZachSchneider[dot]com",
+      "social": [
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/zkm",
+          "icon": "assets/icon-tw_48.png"
+        },
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/zschneider",
+          "icon": "assets/icon-linkedin_48.png"
+        },
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/zkm82",
+          "icon": "assets/icon-fb_48.png"
+        }
+      ]
+    }
+  }
+  
