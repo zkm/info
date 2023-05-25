@@ -92,6 +92,8 @@ li:last-child {
 
 li .social-icon {
   margin-right: 10px;
+  max-width: 32px;
+  opacity: .5;
 }
 
 li a {
@@ -103,4 +105,8 @@ li a {
 li a::after {
   content: attr(data-text);
   font-size: 16px;
+}
+
+li a:hover img.social-icon {
+  opacity: .75;
 }

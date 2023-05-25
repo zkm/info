@@ -33,7 +33,15 @@ export function createContentElements() {
   const contactTitle = createElement("h3", null, content.content.contact.title);
 
   // Create separate elements for "Email:" and the email address
-  const emailText = createElement("span", null, ` ${content.content.contact.text.replace("{email}", content.content.contact.email)}`);
+  const emailText = createElement(
+    "span",
+    null,
+    ` ${content.content.contact.text.replace(
+      "{email}",
+      content.content.contact.email
+    )}`
+  );
+
   const contactEmail = createElement("p");
   contactEmail.append(emailText);
 
@@ -46,6 +54,7 @@ export function createContentElements() {
     const listItem = createElement("li");
     const link = createElement("a");
     link.href = social.url;
+    link.target = "_blank";
 
     const icon = createElement("img", "social-icon");
     icon.src = social.icon;
@@ -56,6 +65,5 @@ export function createContentElements() {
   });
 
   contentDiv.appendChild(socialLinksList);
-
   container.appendChild(contentDiv);
 }
