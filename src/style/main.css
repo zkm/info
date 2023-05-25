@@ -35,21 +35,26 @@ h3 {
   font-size: 1.5rem;
 }
 p {
+  max-width: 500px;
   font: 9pt/14pt "Lucida Grande", Verdana, Helvetica, sans-serif;
 }
-
-header {
-  background: url("../assets/bg-header.gif") no-repeat #f4ddb1 top left;
-  width: 500px;
-  height: 500px;
-  position: relative;
-}
-
 header code {
-  position: absolute;
-  bottom: -20px;
+  display: none;
 }
+@media (min-width: 620px) {
+  header {
+    background: url("../assets/bg-header.gif") no-repeat #f4ddb1 top left;
+    width: 280px;
+    height: 500px;
+    position: relative;
+  }
 
+  header code {
+    display: block;
+    position: absolute;
+    bottom: -20px;
+  }
+}
 footer {
   background: transparent;
   height: 66px;
@@ -93,7 +98,7 @@ li:last-child {
 li .social-icon {
   margin-right: 10px;
   max-width: 32px;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 li a {
@@ -108,5 +113,5 @@ li a::after {
 }
 
 li a:hover img.social-icon {
-  opacity: .75;
+  opacity: 0.75;
 }
