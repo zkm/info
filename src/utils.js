@@ -1,4 +1,4 @@
-import content from "./content.json";
+import content from "./data/content.json";
 
 function createElement(tagName, className, text) {
   const element = document.createElement(tagName);
