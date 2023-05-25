@@ -1,17 +1,19 @@
 {
-    "header": "ZachSchneider.info",
-    "version": "v1.25",
-    "title": ":: Zach Schneider [dot] info ::",
+  "header": "ZachSchneider.info",
+  "version": "v1.25",
+  "title": "Zach Schneider - Cosmic Code Crusader | Web Developer | Portfolio",
+  "content": {
     "welcome": {
       "title": "Welcome!",
-      "text": "Hello my name is Zach...WOW impressive I know well this site was made for no reason. I am not selling anything I don't want anything I am just really bored and well this is something I just felt like doing."
+      "text": "Hello! I'm Zach, a Cosmic Code Crusader with over 15 years of experience in web development. I'm passionate about building intuitive and user-friendly websites that leave a lasting impression."
     },
     "about": {
       "title": "About Me",
-      "text": "I am a Web and Graphic Designer with a 4-Year degree from the famous Westwood College."
+      "text": "As a seasoned Full Stack Developer, I've honed my skills and expertise over the course of my exciting journey in the world of web development. With a strong focus on creating immersive digital experiences, I thrive on bringing ideas to life through innovative solutions."
     },
     "contact": {
       "title": "Contact",
+      "text": "If you have any questions or would like to collaborate on a project, feel free to reach out to me. You can email me at {email} or connect with me on social media. Let's embark on an exciting web development adventure together!",
       "email": "me[at]ZachSchneider[dot]com",
       "social": [
         {
@@ -32,4 +34,4 @@
       ]
     }
   }
-  
+}
