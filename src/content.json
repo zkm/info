@@ -14,22 +14,32 @@
     "contact": {
       "title": "Contact",
       "text": "If you have any questions or would like to collaborate on a project, feel free to reach out to me. You can email me at {email} or connect with me on social media. Let's embark on an exciting web development adventure together!",
-      "email": "me[at]ZachSchneider[dot]com",
+      "email": "me@zachschneider.com",
       "social": [
-        {
-          "name": "Twitter",
-          "url": "https://twitter.com/zkm",
-          "icon": "assets/icon-tw_48.png"
-        },
         {
           "name": "LinkedIn",
           "url": "https://www.linkedin.com/in/zschneider",
-          "icon": "assets/icon-linkedin_48.png"
+          "icon": "assets/icon-linkedin.svg"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/zkm",
+          "icon": "assets/icon-twitter.svg"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/zachschneider",
+          "icon": "assets/icon-instagram.svg"
         },
         {
           "name": "Facebook",
           "url": "https://www.facebook.com/zkm82",
-          "icon": "assets/icon-fb_48.png"
+          "icon": "assets/icon-facebook.svg"
+        },
+        {
+          "name": "Github",
+          "url": "https://www.github.com/zkm",
+          "icon": "assets/icon-github.svg"
         }
       ]
     }
