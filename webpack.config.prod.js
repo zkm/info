@@ -2,7 +2,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const DashboardPlugin = require("webpack-dashboard/plugin");
 
 module.exports = {
   mode: "production",
@@ -10,6 +9,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/info/", 
   },
   module: {
     rules: [
@@ -42,19 +42,6 @@ module.exports = {
           to: "assets",
         },
       ],
-    }),
-    new DashboardPlugin({
-      customOptions: {
-        logLevel: "info",
-        minWidth: 500,
-        minHeight: 300,
-        borderRadius: 10,
-        theme: {
-          scheme: "monokai",
-          author: "wimer hazenberg (http://www.monokai.nl)",
-          base00: "#272822",
-        },
-      },
     }),
   ],
 };
