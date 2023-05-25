@@ -30,7 +30,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.hbs",
-      templateParameters: require("./src/content.json"),
+      templateParameters: require("./src/data/content.json"),
       filename: "index.html",
       inject: "body",
       scriptLoading: "blocking",
