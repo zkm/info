@@ -1,12 +1,11 @@
 // webpack.config.js
 const path = require("path");
-const glob = require('glob');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const DashboardPlugin = require('webpack-dashboard/plugin');
+const DashboardPlugin = require("webpack-dashboard/plugin");
 
 module.exports = {
-  mode: "development", // Set the mode to 'development' or 'production'
+  mode: "development",
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
@@ -20,9 +19,9 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'assets/[name][ext]',
+          filename: "assets/[name][ext]",
         },
       },
       { test: /\.(hbs|handlebars)$/, loader: "handlebars-loader" },
@@ -30,7 +29,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.hbs", // or index.handlebars
+      template: "./src/index.hbs",
       templateParameters: require("./src/content.json"),
       filename: "index.html",
       inject: "body",
@@ -45,19 +44,17 @@ module.exports = {
       ],
     }),
     new DashboardPlugin({
-      // Custom options here
       customOptions: {
-        logLevel: 'info',
+        logLevel: "info",
         minWidth: 500,
         minHeight: 300,
         borderRadius: 10,
         theme: {
-          scheme: 'monokai',
-          author: 'wimer hazenberg (http://www.monokai.nl)',
-          base00: '#272822', // example custom color
-          // more custom colors...
-        }
-      }
-    })
+          scheme: "monokai",
+          author: "wimer hazenberg (http://www.monokai.nl)",
+          base00: "#272822",
+        },
+      },
+    }),
   ],
 };

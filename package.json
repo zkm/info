@@ -1,12 +1,13 @@
 {
   "name": "project_info",
   "version": "1.25.0",
+  "homepage": "https://zkm.github.io/info/",
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
-    "start": "webpack-dashboard -- webpack-dev-server --config webpack.config.js",
-    "build": "webpack --config webpack.config.js"
-  },
+    "start": "webpack-dashboard -- webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js"
+    },
   "keywords": [],
   "author": "Zach Schneider",
   "license": "MIT",
