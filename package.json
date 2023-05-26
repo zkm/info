@@ -7,7 +7,8 @@
   "scripts": {
     "start": "webpack-dashboard -- webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Zach Schneider",
@@ -26,6 +27,8 @@
     "handlebars": "^4.7.7",
     "handlebars-loader": "^1.7.3",
     "html-webpack-plugin": "^5.5.1",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "style-loader": "^3.3.3",
     "webpack": "^5.83.1",
     "webpack-cli": "^5.1.1",
