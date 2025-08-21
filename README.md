@@ -1,6 +1,9 @@
 # info
 
-info is a personal website built using webpack, webpack-dashboard, and jest.
+[![CI Tests](https://github.com/zkm/info/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/zkm/info/actions/workflows/test.yml)
+[![Deploy to Pages](https://github.com/zkm/info/actions/workflows/gh-pages.yml/badge.svg?branch=main)](https://github.com/zkm/info/actions/workflows/gh-pages.yml)
+
+info is a personal website built using webpack, webpack-dashboard, and jest. It is automatically deployed to GitHub Pages via GitHub Actions.
 
 ## Installation
 
@@ -9,6 +12,25 @@ info is a personal website built using webpack, webpack-dashboard, and jest.
 2.  Navigate to the project directory: `cd info`
     
 3.  Install the dependencies: `yarn`
+
+Requirements
+- Node.js 20
+- Yarn 1.x
+
+## Try it locally
+
+Install dependencies and start the dev server with HMR:
+
+```zsh
+yarn
+yarn start
+```
+
+Build a production bundle to `dist`:
+
+```zsh
+yarn build
+```
 
 ## Development
 
@@ -29,11 +51,25 @@ To run the tests: `yarn test`
 This will execute the test suite and provide feedback on the test results.
 
 
-## Deployment
+## Deployment (GitHub Pages via Actions)
 
-To deploy the application:
-1. Update the necessary deployment configuration settings, such as API keys or deployment targets.
-2. Run the deploy command: `yarn deploy`
+Deployments are automated. On every push to `main`:
+- GitHub Actions builds the app (`yarn build`).
+- The `dist` folder is published to GitHub Pages (Source: GitHub Actions).
+
+View your live site at: https://zkm.github.io/info/
+
+Manual deploy: You can trigger the workflow from the Actions tab using “Run workflow”.
+
+Notes
+- Build output directory: `dist` (see `webpack.config.prod.js`).
+- The workflow file is at `.github/workflows/gh-pages.yml` and uses the official Pages actions (`upload-pages-artifact` and `deploy-pages`).
+
+## Troubleshooting
+
+- If the site looks outdated, check the latest runs of the deploy workflow and confirm the "Deploy to GitHub Pages" job succeeded. A page URL is shown on success.
+- Ensure `dist` contains `index.html` and assets after `yarn build`.
+- Pages source should be set to "GitHub Actions" in repo Settings → Pages.
 
 ## Additional Dashboard Options
 
