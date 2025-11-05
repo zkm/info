@@ -11,11 +11,21 @@ info is a personal website built using webpack, webpack-dashboard, and jest. It 
     
 2.  Navigate to the project directory: `cd info`
     
-3.  Install the dependencies: `yarn`
+3.  Ensure Corepack is enabled (for Yarn 4):
+
+	```zsh
+	corepack enable
+	```
+
+4.  Install the dependencies:
+
+	```zsh
+	yarn
+	```
 
 Requirements
-- Node.js 20
-- Yarn 1.x
+- Node.js 20+
+- Yarn 4 (Berry) via Corepack
 
 ## Try it locally
 
@@ -31,6 +41,10 @@ Build a production bundle to `dist`:
 ```zsh
 yarn build
 ```
+
+The dev server opens in your default browser and serves at:
+
+- http://localhost:8888
 
 ## Development
 
@@ -71,15 +85,9 @@ Notes
 - Ensure `dist` contains `index.html` and assets after `yarn build`.
 - Pages source should be set to "GitHub Actions" in repo Settings → Pages.
 
-## Additional Dashboard Options
+## Dashboard
 
-The webpack-dashboard provides additional options for customization:
-
-*   Progress Bar: To enable the progress bar during the build process, set the `showProgress` option to `true` in the webpack configuration file.
-    
-*   Customizations: You can customize the appearance of the dashboard by specifying custom colors and layouts in the webpack configuration file.
-
-Refer to the webpack-dashboard documentation for more information on how to utilize these options.
+This project uses webpack-dashboard both via the CLI wrapper in the start script and the plugin in `webpack.config.dev.js`. It works out of the box; no extra configuration is required. To customize the theme or layout, adjust the `new DashboardPlugin({ ... })` options in `webpack.config.dev.js` and refer to the webpack-dashboard documentation.
 
 ## Resources
 
