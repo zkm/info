@@ -1,7 +1,11 @@
 body {
   background: #f4ddb1;
   margin: 0;
-  font: 10pt/14pt "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font:
+    10pt/14pt 'Lucida Grande',
+    Verdana,
+    Helvetica,
+    sans-serif;
 }
 
 a:link,
@@ -36,14 +40,18 @@ h3 {
 }
 p {
   max-width: 500px;
-  font: 9pt/14pt "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font:
+    9pt/14pt 'Lucida Grande',
+    Verdana,
+    Helvetica,
+    sans-serif;
 }
 header code {
   display: none;
 }
 @media (min-width: 620px) {
   header {
-    background: url("../assets/bg-header.gif") no-repeat #f4ddb1 top left;
+    background: url('../assets/bg-header.gif') no-repeat #f4ddb1 top left;
     width: 280px;
     height: 500px;
     position: relative;
@@ -59,7 +67,11 @@ footer {
   background: transparent;
   height: 66px;
   text-align: center;
-  font: 8pt/14pt "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font:
+    8pt/14pt 'Lucida Grande',
+    Verdana,
+    Helvetica,
+    sans-serif;
   color: #333333;
 }
 

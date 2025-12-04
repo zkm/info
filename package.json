@@ -6,8 +6,13 @@
   "main": "dist/bundle.js",
   "scripts": {
     "start": "webpack-dashboard -- webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js",
-    "test": "jest"
+    "prebuild": "yarn format && yarn lint:fix && yarn test",
+    "build": "yarn prebuild && webpack --config webpack.config.prod.js",
+    "test": "jest",
+    "audit": "yarn audit",
+    "format": "prettier --write \"src/**/*.{js,json,css,hbs}\"",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "eslint src --ext .js --fix"
   },
   "keywords": [],
   "author": "Zach Schneider",
@@ -20,6 +25,7 @@
     "copy-webpack-plugin": "^13.0.1",
     "css-loader": "^7.1.2",
     "ejs-loader": "^0.5.0",
+    "eslint": "^8.55.0",
     "file-loader": "^6.2.0",
     "gh-pages": "^6.3.0",
     "handlebars": "^4.7.8",
@@ -27,6 +33,7 @@
     "html-webpack-plugin": "^5.6.4",
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
+    "prettier": "^3.1.1",
     "style-loader": "^4.0.0",
     "webpack": "^5.101.3",
     "webpack-cli": "^6.0.1",
