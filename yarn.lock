@@ -4843,9 +4843,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^10.4.1":
-  version: 10.4.1
-  resolution: "eslint@npm:10.4.1"
+"eslint@npm:^10.5.0":
+  version: 10.5.0
+  resolution: "eslint@npm:10.5.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.8.0"
     "@eslint-community/regexpp": "npm:^4.12.2"
@@ -4884,7 +4884,7 @@ __metadata:
       optional: true
   bin:
     eslint: bin/eslint.js
-  checksum: c5e6bb5158fb0d62f090c8e2671de5c98283bbb37a58b6d871bada63af3018e683483c96c1a92272fedc8f4e5279a273a0451acf0da67c487406639daa05aedb
+  checksum: e1f7a1d442027e5478945cb07b6a382adc3f149fbfd3dbc14951a7a9fa312546b27fb35b0556897ca1d04539ad16ee85bda75ad9f724873e1153d1fbca0d6145
   languageName: node
   linkType: hard
 
@@ -7824,7 +7824,7 @@ __metadata:
     copy-webpack-plugin: "npm:^14.0.0"
     css-loader: "npm:^7.1.4"
     ejs-loader: "npm:^0.5.0"
-    eslint: "npm:^10.4.1"
+    eslint: "npm:^10.5.0"
     file-loader: "npm:^6.2.0"
     gh-pages: "npm:^6.3.0"
     globals: "npm:^17.6.0"
@@ -7838,7 +7838,7 @@ __metadata:
     webpack: "npm:^5.107.2"
     webpack-cli: "npm:^7.0.3"
     webpack-dashboard: "npm:^3.3.8"
-    webpack-dev-server: "npm:^5.2.4"
+    webpack-dev-server: "npm:^5.2.5"
   languageName: unknown
   linkType: soft
 
@@ -9327,9 +9327,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:^5.2.4":
-  version: 5.2.4
-  resolution: "webpack-dev-server@npm:5.2.4"
+"webpack-dev-server@npm:^5.2.5":
+  version: 5.2.5
+  resolution: "webpack-dev-server@npm:5.2.5"
   dependencies:
     "@types/bonjour": "npm:^3.5.13"
     "@types/connect-history-api-fallback": "npm:^1.5.4"
@@ -9368,7 +9368,7 @@ __metadata:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: 42f8afe11b7bfe65d72e30d861ddf1e4d05f27202c4c1162d204cb41a4a858dffc91c5a02bf44ec08acc8c02b4a57aaf46924ec12a5e5b97c307991379282669
+  checksum: 8963b3533197ebd820456f3cb14d9234ba4dff10412eb11200b8099c501559abf7a700e9a5d4136f17929374b61c1af5c6ef597471ea45b97ba6ca69a12e5ca8
   languageName: node
   linkType: hard
 
