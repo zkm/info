@@ -114,19 +114,19 @@ footer {
 }
 
 .parallax-blob--amber {
-  top: -10%;
-  right: -5%;
+  top: -20%;
+  right: -15%;
   width: 320px;
   height: 320px;
-  background: rgba(217, 108, 58, 0.5);
+  background: rgba(217, 108, 58, 0.18);
 }
 
 .parallax-blob--teal {
-  bottom: -15%;
-  left: -8%;
+  bottom: -25%;
+  left: -18%;
   width: 280px;
   height: 280px;
-  background: rgba(39, 90, 120, 0.4);
+  background: rgba(39, 90, 120, 0.15);
 }
 
 .content {
