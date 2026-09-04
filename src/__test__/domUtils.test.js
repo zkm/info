@@ -1,9 +1,7 @@
-import { createElement } from '../domUtils';
+import { buildEmailAddress } from '../domUtils';
 
-test('createElement creates a DOM element with the specified tag, class, and text', () => {
-  const element = createElement('div', 'my-class', 'Hello, world!');
-
-  expect(element.tagName).toBe('DIV');
-  expect(element.className).toBe('my-class');
-  expect(element.textContent).toBe('Hello, world!');
+test('buildEmailAddress joins a user and domain into an email address', () => {
+  expect(buildEmailAddress('me', 'zachschneider.com')).toBe(
+    'me@zachschneider.com'
+  );
 });
