@@ -64,6 +64,14 @@ To run the tests: `yarn test`
 
 This will execute the test suite and provide feedback on the test results.
 
+## Formatting & Linting
+
+- Format: `yarn format`
+- Lint: `yarn lint` (check) or `yarn lint:fix` (auto-fix)
+
+`yarn build` runs all three (`format`, `lint:fix`, `test`) automatically via `prebuild`.
+
+Note: `yarn format` (Prettier) intentionally does **not** include `src/index.hbs`. Prettier has no dedicated parser for classic Handlebars documents and falls back to its Glimmer (Ember template) parser for `.hbs` files, which doesn't recognize a full HTML document and silently drops content it doesn't understand — including the `<!DOCTYPE html>` declaration. If you need to reformat `index.hbs`, do it by hand rather than adding it back to the `format` script's glob.
 
 ## Deployment (GitHub Pages via Actions)
 
