@@ -33,8 +33,7 @@ a:focus {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   color: #8c7364;
   margin-top: 0;
   margin-bottom: 0;
@@ -45,9 +44,6 @@ h1 {
 }
 h2 {
   font-size: 1.75rem;
-}
-h3 {
-  font-size: 1.5rem;
 }
 p {
   max-width: 500px;
@@ -96,18 +92,6 @@ header h1 {
     display: none;
   }
 }
-footer {
-  background: transparent;
-  height: 66px;
-  text-align: center;
-  font:
-    0.75rem/1.5 'Lucida Grande',
-    Verdana,
-    Helvetica,
-    sans-serif;
-  color: #333333;
-}
-
 .container {
   position: relative;
   z-index: 1;
@@ -150,12 +134,6 @@ li .social-icon {
 li a {
   text-decoration: none;
   color: inherit;
-  font-size: 0;
-}
-
-li a::after {
-  content: attr(data-text);
-  font-size: 16px;
 }
 
 li a:hover img.social-icon {
