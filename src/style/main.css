@@ -81,19 +81,22 @@ header h1 {
   }
 }
 
-/* Below 620px the illustration has nowhere to sit as a sidebar (header above), so it's
-   shown faded full-screen behind the content instead of disappearing outright. */
-.mobile-bg {
+/* A faded echo of the illustration behind the whole page at every width. The gif is
+   only 282x439, so its size is capped to avoid visibly upscaling/blurring it.
+   Centered on mobile (single column, nothing to dodge); shifted into the empty
+   right margin at 620px+ so it never sits behind the text column. */
+.bg-illustration {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: url('../assets/bg-header.gif') no-repeat center / contain;
+  background: url('../assets/bg-header.gif') no-repeat center / min(480px, 70vh)
+    auto;
   opacity: 0.1;
   pointer-events: none;
 }
 @media (min-width: 620px) {
-  .mobile-bg {
-    display: none;
+  .bg-illustration {
+    background-position: right center;
   }
 }
 footer {
