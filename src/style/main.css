@@ -118,33 +118,6 @@ footer {
   margin: 0;
 }
 
-/* Soft blurred circles that drift with the cursor (index.js) for a bit of depth.
-   position: fixed + transform only, so they never affect layout or CLS. */
-.parallax-blob {
-  position: fixed;
-  z-index: 0;
-  border-radius: 50%;
-  filter: blur(60px);
-  pointer-events: none;
-  will-change: transform;
-}
-
-.parallax-blob--amber {
-  top: -20%;
-  right: -15%;
-  width: 320px;
-  height: 320px;
-  background: rgba(217, 108, 58, 0.18);
-}
-
-.parallax-blob--teal {
-  bottom: -25%;
-  left: -18%;
-  width: 280px;
-  height: 280px;
-  background: rgba(39, 90, 120, 0.15);
-}
-
 .content {
   padding: 10px 21px 21px;
 }
