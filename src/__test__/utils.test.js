@@ -10,11 +10,11 @@ test('createContentElements renders the content sections correctly', () => {
   createContentElements();
 
   // Check if the content sections are rendered correctly
-  expect(container.querySelectorAll('h3').length).toBe(3);
+  expect(container.querySelectorAll('h2').length).toBe(3);
   expect(container.querySelectorAll('p').length).toBe(3);
 
   // Check if the welcome section is rendered correctly
-  expect(container.querySelector('h3').textContent).toBe(
+  expect(container.querySelector('h2').textContent).toBe(
     content.content.welcome.title
   );
   expect(container.querySelector('p').textContent).toBe(
@@ -22,7 +22,7 @@ test('createContentElements renders the content sections correctly', () => {
   );
 
   // Check if the about section is rendered correctly
-  expect(container.querySelectorAll('h3')[1].textContent).toBe(
+  expect(container.querySelectorAll('h2')[1].textContent).toBe(
     content.content.about.title
   );
   expect(container.querySelectorAll('p')[1].textContent).toBe(
@@ -30,7 +30,7 @@ test('createContentElements renders the content sections correctly', () => {
   );
 
   // Check if the contact section is rendered correctly
-  expect(container.querySelectorAll('h3')[2].textContent).toBe(
+  expect(container.querySelectorAll('h2')[2].textContent).toBe(
     content.content.contact.title
   );
   expect(container.querySelectorAll('p')[2].textContent).toContain(

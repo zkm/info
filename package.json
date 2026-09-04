@@ -10,7 +10,7 @@
     "build": "yarn prebuild && webpack --config webpack.config.prod.js",
     "test": "jest",
     "audit": "yarn npm audit",
-    "format": "prettier --write \"src/**/*.{js,json,css,hbs}\"",
+    "format": "prettier --write \"src/**/*.{js,json,css}\"",
     "lint": "eslint src --ext .js",
     "lint:fix": "eslint src --ext .js --fix"
   },

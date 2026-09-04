@@ -12,41 +12,34 @@ function createElement(tagName, className, text) {
 }
 
 export function createContentElements() {
-  const container = document.querySelector('.container');
-
-  // Create content div
-  const contentDiv = createElement('div', 'content');
+  const container = document.querySelector('.content');
 
   // Render welcome section
-  const welcomeTitle = createElement('h3', null, content.content.welcome.title);
+  const welcomeTitle = createElement('h2', null, content.content.welcome.title);
   const welcomeText = createElement('p', null, content.content.welcome.text);
-  contentDiv.appendChild(welcomeTitle);
-  contentDiv.appendChild(welcomeText);
+  container.appendChild(welcomeTitle);
+  container.appendChild(welcomeText);
 
   // Render about section
-  const aboutTitle = createElement('h3', null, content.content.about.title);
+  const aboutTitle = createElement('h2', null, content.content.about.title);
   const aboutText = createElement('p', null, content.content.about.text);
-  contentDiv.appendChild(aboutTitle);
-  contentDiv.appendChild(aboutText);
+  container.appendChild(aboutTitle);
+  container.appendChild(aboutText);
 
   // Render contact section
-  const contactTitle = createElement('h3', null, content.content.contact.title);
+  const contactTitle = createElement('h2', null, content.content.contact.title);
 
-  // Create separate elements for "Email:" and the email address
-  const emailText = createElement(
-    'span',
-    null,
-    ` ${content.content.contact.text.replace(
-      '{email}',
-      content.content.contact.email
-    )}`
-  );
+  // Build the contact paragraph with a real mailto link for the email address
+  const [beforeEmail, afterEmail] =
+    content.content.contact.text.split('{email}');
+  const emailLink = createElement('a', null, content.content.contact.email);
+  emailLink.href = `mailto:${content.content.contact.email}`;
 
-  const contactEmail = createElement('p');
-  contactEmail.append(emailText);
+  const contactParagraph = createElement('p');
+  contactParagraph.append(beforeEmail, emailLink, afterEmail);
 
-  contentDiv.appendChild(contactTitle);
-  contentDiv.appendChild(contactEmail);
+  container.appendChild(contactTitle);
+  container.appendChild(contactParagraph);
 
   // Render social links in contact section
   const socialLinksList = createElement('ul');
@@ -55,15 +48,16 @@ export function createContentElements() {
     const link = createElement('a');
     link.href = social.url;
     link.target = '_blank';
+    link.rel = 'noopener noreferrer';
 
     const icon = createElement('img', 'social-icon');
     icon.src = social.icon;
+    icon.alt = social.name;
 
     link.appendChild(icon);
     listItem.appendChild(link);
     socialLinksList.appendChild(listItem);
   });
 
-  contentDiv.appendChild(socialLinksList);
-  container.appendChild(contentDiv);
+  container.appendChild(socialLinksList);
 }

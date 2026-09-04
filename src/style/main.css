@@ -1,8 +1,16 @@
 body {
-  background: #f4ddb1;
+  background:
+    radial-gradient(
+        circle at 1px 1px,
+        rgba(140, 115, 100, 0.18) 1px,
+        transparent 0
+      )
+      0 0 / 24px 24px,
+    #f4ddb1;
   margin: 0;
+  min-height: 100vh;
   font:
-    10pt/14pt 'Lucida Grande',
+    1rem/1.5 'Lucida Grande',
     Verdana,
     Helvetica,
     sans-serif;
@@ -26,6 +34,7 @@ h1,
 h2,
 h3 {
   color: #8c7364;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -40,14 +49,20 @@ h3 {
 }
 p {
   max-width: 500px;
+  margin-top: 0;
   font:
-    9pt/14pt 'Lucida Grande',
+    1rem/1.5 'Lucida Grande',
     Verdana,
     Helvetica,
     sans-serif;
 }
-header code {
+header h1 {
   display: none;
+  margin: 0;
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: inherit;
 }
 @media (min-width: 620px) {
   header {
@@ -57,7 +72,7 @@ header code {
     position: relative;
   }
 
-  header code {
+  header h1 {
     display: block;
     position: absolute;
     bottom: -20px;
@@ -68,7 +83,7 @@ footer {
   height: 66px;
   text-align: center;
   font:
-    8pt/14pt 'Lucida Grande',
+    0.75rem/1.5 'Lucida Grande',
     Verdana,
     Helvetica,
     sans-serif;
@@ -77,14 +92,14 @@ footer {
 
 .container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   max-width: 1024px;
-  margin: auto;
+  margin: 0;
 }
 
 .content {
-  padding: 21px;
+  padding: 10px 21px 21px;
   text-align: justify;
 }
 
