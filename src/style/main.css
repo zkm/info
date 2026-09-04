@@ -129,6 +129,9 @@ li .social-icon {
   margin-right: 10px;
   max-width: 32px;
   opacity: 0.5;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 li a {
@@ -137,5 +140,6 @@ li a {
 }
 
 li a:hover img.social-icon {
-  opacity: 0.75;
+  opacity: 0.85;
+  transform: scale(1.15);
 }
