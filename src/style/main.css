@@ -1,3 +1,6 @@
+/* Avoid viewport-relative sizing here (e.g. min-height: 100vh) — it previously caused a
+   Lighthouse CLS false-positive from the test harness resizing its window mid-trace.
+   The background still fills the viewport without it via normal body->canvas propagation. */
 body {
   background:
     radial-gradient(
