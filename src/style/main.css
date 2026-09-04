@@ -80,6 +80,22 @@ header h1 {
     bottom: -20px;
   }
 }
+
+/* Below 620px the illustration has nowhere to sit as a sidebar (header above), so it's
+   shown faded full-screen behind the content instead of disappearing outright. */
+.mobile-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: url('../assets/bg-header.gif') no-repeat center / contain;
+  opacity: 0.1;
+  pointer-events: none;
+}
+@media (min-width: 620px) {
+  .mobile-bg {
+    display: none;
+  }
+}
 footer {
   background: transparent;
   height: 66px;
