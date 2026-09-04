@@ -16,7 +16,8 @@
       "title": "Contact",
       "textBefore": "If you have any questions or would like to collaborate on a project, feel free to reach out to me. You can email me at ",
       "textAfter": " or connect with me on social media. Let's embark on an exciting web development adventure together!",
-      "email": "me@zachschneider.com",
+      "emailUser": "me",
+      "emailDomain": "zachschneider.com",
       "social": [
         {
           "name": "LinkedIn",

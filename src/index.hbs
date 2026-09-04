@@ -22,7 +22,7 @@
         <p>{{content.about.text}}</p>
 
         <h2>{{content.contact.title}}</h2>
-        <p>{{content.contact.textBefore}}<a href='mailto:{{content.contact.email}}'>{{content.contact.email}}</a>{{content.contact.textAfter}}</p>
+        <p>{{content.contact.textBefore}}<a id='contact-email' data-user='{{content.contact.emailUser}}' data-domain='{{content.contact.emailDomain}}'></a>{{content.contact.textAfter}}</p>
 
         <ul>
           {{#each content.contact.social}}
