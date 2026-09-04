@@ -14,7 +14,26 @@
       <header>
         <h1>{{header}} <small>{{version}}</small></h1>
       </header>
-      <main class='content'></main>
+      <main class='content'>
+        <h2>{{content.welcome.title}}</h2>
+        <p>{{content.welcome.text}}</p>
+
+        <h2>{{content.about.title}}</h2>
+        <p>{{content.about.text}}</p>
+
+        <h2>{{content.contact.title}}</h2>
+        <p>{{content.contact.textBefore}}<a href='mailto:{{content.contact.email}}'>{{content.contact.email}}</a>{{content.contact.textAfter}}</p>
+
+        <ul>
+          {{#each content.contact.social}}
+            <li>
+              <a href='{{this.url}}' target='_blank' rel='noopener noreferrer'>
+                <img class='social-icon' src='{{this.icon}}' alt='{{this.name}}' width='32' height='32' />
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+      </main>
     </div>
   </body>
 

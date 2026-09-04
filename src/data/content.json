@@ -14,7 +14,8 @@
     },
     "contact": {
       "title": "Contact",
-      "text": "If you have any questions or would like to collaborate on a project, feel free to reach out to me. You can email me at {email} or connect with me on social media. Let's embark on an exciting web development adventure together!",
+      "textBefore": "If you have any questions or would like to collaborate on a project, feel free to reach out to me. You can email me at ",
+      "textAfter": " or connect with me on social media. Let's embark on an exciting web development adventure together!",
       "email": "me@zachschneider.com",
       "social": [
         {
