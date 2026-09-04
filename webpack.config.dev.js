@@ -1,4 +1,3 @@
-// webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -43,19 +42,7 @@ module.exports = {
         },
       ],
     }),
-    new DashboardPlugin({
-      customOptions: {
-        logLevel: "info",
-        minWidth: 500,
-        minHeight: 300,
-        borderRadius: 10,
-        theme: {
-          scheme: "monokai",
-          author: "wimer hazenberg (http://www.monokai.nl)",
-          base00: "#272822",
-        },
-      },
-    }),
+    new DashboardPlugin(),
   ],
   devServer: {
     static: {
