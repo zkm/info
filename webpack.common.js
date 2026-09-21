@@ -40,6 +40,17 @@ module.exports = {
       filename: 'index.html',
       inject: 'head',
       scriptLoading: 'defer',
+      // The default minifier strips the space after </noscript> (a block-level
+      // tag to it), gluing the email address to the following word.
+      minify: {
+        collapseWhitespace: true,
+        conservativeCollapse: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
+      },
     }),
     new MiniCssExtractPlugin({ filename: 'main.css' }),
     new CopyWebpackPlugin({
