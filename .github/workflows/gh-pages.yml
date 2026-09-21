@@ -2,17 +2,16 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
-# Required permissions for GitHub Pages
+# The build job runs dependency code, so it gets read-only access; only the
+# deploy job gets the Pages/OIDC permissions.
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -25,7 +24,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'yarn'
       - name: Enable Corepack
         run: corepack enable
@@ -33,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Build project
+      - name: Build project (format check, lint, tests, webpack)
         run: yarn build
 
       - name: Upload build artifact
@@ -47,6 +46,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

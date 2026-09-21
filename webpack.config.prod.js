@@ -1,47 +1,10 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common');
 
-module.exports = {
-  mode: "production",
-  entry: "./src/index.js",
+module.exports = merge(common, {
+  mode: 'production',
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
     // Site is served from https://zkm.github.io/info/, not the domain root.
-    publicPath: "/info/",
+    publicPath: '/info/',
   },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        type: "asset/resource",
-        generator: {
-          filename: "assets/[name][ext]",
-        },
-      },
-      { test: /\.(hbs|handlebars)$/, loader: "handlebars-loader" },
-    ],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.hbs",
-      templateParameters: require("./src/data/content.json"),
-      filename: "index.html",
-      inject: "body",
-      scriptLoading: "blocking",
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: "src/assets",
-          to: "assets",
-        },
-      ],
-    }),
-  ],
-};
+});

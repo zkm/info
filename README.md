@@ -8,23 +8,24 @@ info is a personal website built using webpack, webpack-dashboard, and jest. It 
 ## Installation
 
 1.  Clone the repository: `git clone git@github.com:zkm/info.git`
-    
+
 2.  Navigate to the project directory: `cd info`
-    
+
 3.  Ensure Corepack is enabled (for Yarn 4):
 
-	```zsh
-	corepack enable
-	```
+    ```zsh
+    corepack enable
+    ```
 
 4.  Install the dependencies:
 
-	```zsh
-	yarn
-	```
+    ```zsh
+    yarn
+    ```
 
 Requirements
-- Node.js 20+
+
+- Node.js 22+
 - Yarn 4 (Berry) via Corepack
 
 ## Try it locally
@@ -69,13 +70,14 @@ This will execute the test suite and provide feedback on the test results.
 - Format: `yarn format`
 - Lint: `yarn lint` (check) or `yarn lint:fix` (auto-fix)
 
-`yarn build` runs all three (`format`, `lint:fix`, `test`) automatically via `prebuild`.
+`yarn check` runs `format:check`, `lint` and `test` without modifying files, and `yarn build` runs it before bundling (CI does the same). Use `yarn format` and `yarn lint:fix` locally to apply fixes.
 
 Note: `yarn format` (Prettier) intentionally does **not** include `src/index.hbs`. Prettier has no dedicated parser for classic Handlebars documents and falls back to its Glimmer (Ember template) parser for `.hbs` files, which doesn't recognize a full HTML document and silently drops content it doesn't understand — including the `<!DOCTYPE html>` declaration. If you need to reformat `index.hbs`, do it by hand rather than adding it back to the `format` script's glob.
 
 ## Deployment (GitHub Pages via Actions)
 
 Deployments are automated. On every push to `main`:
+
 - GitHub Actions builds the app (`yarn build`).
 - The `dist` folder is published to GitHub Pages (Source: GitHub Actions).
 
@@ -84,6 +86,7 @@ View your live site at: https://zkm.github.io/info/
 Manual deploy: You can trigger the workflow from the Actions tab using “Run workflow”.
 
 Notes
+
 - Build output directory: `dist` (see `webpack.config.prod.js`).
 - The workflow file is at `.github/workflows/gh-pages.yml` and uses the official Pages actions (`upload-pages-artifact` and `deploy-pages`).
 
@@ -99,9 +102,9 @@ This project uses webpack-dashboard both via the CLI wrapper in the start script
 
 ## Resources
 
-*   [Webpack Documentation](https://webpack.js.org/)
-*   [Webpack Dashboard Documentation](https://github.com/FormidableLabs/webpack-dashboard)
-*   [Jest Documentation](https://jestjs.io/docs/getting-started)
+- [Webpack Documentation](https://webpack.js.org/)
+- [Webpack Dashboard Documentation](https://github.com/FormidableLabs/webpack-dashboard)
+- [Jest Documentation](https://jestjs.io/docs/getting-started)
 
 ### License
 

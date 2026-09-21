@@ -3,7 +3,7 @@ const globals = require('globals');
 
 module.exports = [
   {
-    ignores: ['node_modules', 'dist', '.next', '.cache'],
+    ignores: ['node_modules', 'dist', '.yarn'],
   },
   {
     files: ['**/*.js'],

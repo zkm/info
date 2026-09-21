@@ -25,7 +25,7 @@
 
         <h2>{{content.contact.title}}</h2>
         <!-- href/text intentionally left blank; index.js fills them in from the data attributes -->
-        <p>{{content.contact.textBefore}}<a id='contact-email' data-user='{{content.contact.emailUser}}' data-domain='{{content.contact.emailDomain}}'></a>{{content.contact.textAfter}}</p>
+        <p>{{content.contact.textBefore}}<a id='contact-email' data-user='{{content.contact.emailUser}}' data-domain='{{content.contact.emailDomain}}'></a><noscript>(enable JavaScript to see my email address)</noscript>{{content.contact.textAfter}}</p>
 
         <ul>
           {{#each content.contact.social}}

@@ -1,58 +1,21 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const DashboardPlugin = require("webpack-dashboard/plugin");
+const path = require('path');
+const { merge } = require('webpack-merge');
+const DashboardPlugin = require('webpack-dashboard/plugin');
+const common = require('./webpack.common');
 
-module.exports = {
-  mode: "development",
-  entry: "./src/index.js",
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        type: "asset/resource",
-        generator: {
-          filename: "assets/[name][ext]",
-        },
-      },
-      { test: /\.(hbs|handlebars)$/, loader: "handlebars-loader" },
-    ],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.hbs",
-      templateParameters: require("./src/data/content.json"),
-      filename: "index.html",
-      inject: "body",
-      scriptLoading: "blocking",
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: "src/assets",
-          to: "assets",
-        },
-      ],
-    }),
-    new DashboardPlugin(),
-  ],
+module.exports = merge(common, {
+  mode: 'development',
+  plugins: [new DashboardPlugin()],
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "dist"),
+      directory: path.resolve(__dirname, 'dist'),
     },
+    // The template and content are compiled in webpack.common.js, so webpack
+    // doesn't know to watch them.
+    watchFiles: ['src/index.hbs', 'src/data/content.json'],
     port: 8888,
-    open: true,
     hot: true,
     compress: true,
-    historyApiFallback: true,
-    host: "localhost",
+    host: 'localhost',
   },
-};
+});

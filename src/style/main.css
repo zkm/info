@@ -19,7 +19,6 @@ body {
 }
 
 a:link,
-a:active,
 a:visited {
   color: #275a78;
   text-decoration: none;
@@ -48,14 +47,15 @@ h2 {
 p {
   max-width: 500px;
   margin-top: 0;
-  font:
-    1rem/1.5 'Lucida Grande',
-    Verdana,
-    Helvetica,
-    sans-serif;
 }
+/* Visually hidden (not display: none) so the site name stays in the accessibility tree. */
 header h1 {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
   margin: 0;
   font-family: monospace;
   font-size: 0.75rem;
@@ -65,14 +65,17 @@ header h1 {
 @media (min-width: 620px) {
   header {
     background: url('../assets/bg-header.gif') no-repeat #f4ddb1 top left;
+    flex: none;
     width: 280px;
     height: 500px;
     position: relative;
   }
 
   header h1 {
-    display: block;
-    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
     bottom: -20px;
   }
 }
@@ -97,9 +100,7 @@ header h1 {
   z-index: 1;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
   max-width: 1024px;
-  margin: 0;
 }
 
 .content {
@@ -110,19 +111,14 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Set the display to flex */
-  flex-wrap: wrap; /* Allow wrapping of list items */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 li {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  margin-right: 0;
-}
-
-li:last-child {
-  margin-right: 0; /* Remove margin from the last list item */
 }
 
 li .social-icon {
@@ -139,7 +135,8 @@ li a {
   color: inherit;
 }
 
-li a:hover img.social-icon {
+li a:hover img.social-icon,
+li a:focus-visible img.social-icon {
   opacity: 0.85;
   transform: scale(1.15);
 }
