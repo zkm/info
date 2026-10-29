@@ -1,7 +1,18 @@
 # info
 
-[![CI Tests](https://github.com/zkm/info/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/zkm/info/actions/workflows/test.yml)
-[![Deploy to Pages](https://github.com/zkm/info/actions/workflows/gh-pages.yml/badge.svg?branch=main)](https://github.com/zkm/info/actions/workflows/gh-pages.yml)
+[![CI Tests](https://github.com/zkm/info/actions/workflows/test.yml/badge.svg)](https://github.com/zkm/info/actions/workflows/test.yml)
+[![Deploy to Pages](https://github.com/zkm/info/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/zkm/info/actions/workflows/gh-pages.yml)
+[![CodeQL](https://github.com/zkm/info/actions/workflows/codeql.yml/badge.svg)](https://github.com/zkm/info/actions/workflows/codeql.yml)
+[![website](https://img.shields.io/website?url=https%3A%2F%2Fzkm.github.io%2Finfo%2F&label=website)](https://zkm.github.io/info/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+![webpack](https://img.shields.io/badge/webpack-8DD6F9?logo=webpack&logoColor=black)
+![Handlebars](https://img.shields.io/badge/Handlebars-000000?logo=handlebarsdotjs&logoColor=white)
+![Babel](https://img.shields.io/badge/Babel-F9DC3E?logo=babel&logoColor=black)
+![Jest](https://img.shields.io/badge/Jest-C21325?logo=jest&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white)
+![Yarn 4](https://img.shields.io/badge/Yarn-4-2C8EBB?logo=yarn&logoColor=white)
+![Node.js 24](https://img.shields.io/badge/Node.js-24-5FA04E?logo=nodedotjs&logoColor=white)
 
 info is a personal website built using webpack, webpack-dashboard, and jest. It is automatically deployed to GitHub Pages via GitHub Actions.
 
